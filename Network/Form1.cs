@@ -19,13 +19,13 @@ namespace Network
         private void Server_Click(object sender, EventArgs e)
         {
             FormServer m = new FormServer();
-            m.ShowDialog();
+            m.Show();
         }
 
         private void Client_Click(object sender, EventArgs e)
         {
             FormClient m = new FormClient();
-            m.ShowDialog();
+            m.Show();
         }
 
         private void Exit_Click(object sender, EventArgs e)
