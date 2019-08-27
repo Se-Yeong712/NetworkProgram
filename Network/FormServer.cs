@@ -106,12 +106,8 @@ namespace Network
             Writer.Flush();
 
             Connected = false;
-            if (Reader != null) Reader.Close();
-            if (Writer != null) Writer.Close();
-            if (Server != null) Server.Stop();
-            if (Client != null) Client.Close();
-            if (ReceiveThread != null) ReceiveThread.Abort();
-            
+            Close();
+
         }
 
         private void rename_Click(object sender, EventArgs e)

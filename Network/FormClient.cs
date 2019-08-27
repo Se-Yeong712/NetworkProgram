@@ -83,12 +83,13 @@ namespace Network
 
         private void button2_Click(object sender, EventArgs e)
         {
+            clientchat.AppendText(user+"님이 나갔습니다. \r\n");
+            Writer.WriteLine(user + "님이 나갔습니다.");
+            Writer.Flush();
+
             Connected = false;
-            if (Reader != null) Reader.Close();
-            if (Writer != null) Writer.Close();
-            if (Server != null) Server.Stop();
-            if (Client != null) Client.Close();
-            if (ReceiveThread != null) ReceiveThread.Abort();
+            Close();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
